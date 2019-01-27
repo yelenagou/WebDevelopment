@@ -1,0 +1,5 @@
+FlexGrid Stuff:
+https://css-tricks.com/snippets/css/complete-guide-grid/
+Listless Navigatin:
+https://css-tricks.com/listless-navigation-using-css-to-do-more-with-less/
+https://darekkay.com/dev/flexbox-cheatsheet.html

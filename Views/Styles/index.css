@@ -1,0 +1,52 @@
+body {
+    
+    background-color: darkkhaki;
+    /* background-image: url('/Users/Lena/Downloads/altino-dantas-1186510-unsplash.jpg'); */
+    /* background-size: cover; */
+
+}
+
+nav, header {
+    background-color: beige;
+    text-align: left;
+    border: 5px dashed purple;
+    cursor: pointer;
+    float: center;
+    font-family: Raleway;
+}
+header {
+    background-color: beige;
+    border: 5px solid purple;  
+}
+.hdrsdet {
+    color: brown;
+}
+.hdrdevops {
+    color: turquoise; 
+}
+li {
+    list-style: none;
+    display: block;
+
+}
+.boxmodel {
+    border: 5px solid red;
+    padding: 5px 20px 5px 20px;
+    margin: 20px 0px 20px 0px;
+    /*display: inline-block;*/
+}
+.boxmodeldisplay {
+ border: 5px solid red;
+ padding: 5px 20px 5px 20px;
+ display: inline-block;
+ margin: 0px 8px 0 0;
+}
+
+.boxmodelnew {
+  border: 5px solid red;
+  display: inline-block;
+  padding: 5 px 20px;
+  margin: 0px 20px;
+  width: 33px;
+  height: 55px;
+}
