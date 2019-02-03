@@ -5,7 +5,7 @@ body {
 }
 .flex-container {
     padding: 0;
-    margin: 0;
+    margin: 20px,0px,20px,0px;
     list-style: none;
     
     display: -webkit-box;
@@ -13,6 +13,7 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
+    background-color: blanchedalmond;
      
     justify-content: space-around;
     align-items: center;
