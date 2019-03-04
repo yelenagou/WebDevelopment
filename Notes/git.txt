@@ -1,0 +1,119 @@
+Git configure
+Three levels of configuration: system, global, local
+To view current settings for git config:
+$git config --list
+$git config --local --list
+$ git config --show-origin --list
+$ git config --system --list
+
+Changing user settings
+$ git config --unset --global user.name
+$ git config --global user.name
+To edit config in Vi editor
+$git config -e
+
+To remove git repo from local repository:
+rm -rf .git
+
+Powershell
+Use a pipe symbol | to pass output directly to another command as an input.
+Get-Process | 
+Where-Object { $_.Handles -ge 500 } |
+Sort-Object Handles |
+Format-Table Handles, Name, Description -Auto}
+
+Setup Git Repo
+Git needs to know who you are.
+1. git config --local --list
+1. git config --global user.name "username"
+2. Git config --global user.email  "email@email.com"
+Set up an initial repo
+1. Within a project folder, type: 
+Git init
+Create a file to version control
+1. echo "text" >> file.txt
+Put file into a repository 
+1. git add file.txt
+Check the repository status
+1. git status
+2. git commit -m "commit remarks"
+Without commit remarks, a file will open in VIM to enter rematks.
+
+Root commit is an initial repo commit.
+
+To amend a commit:
+1. git commit --amend  --reset-author
+2. After VIM opens, make changes and save
+
+To see fuller log
+1. Git log --format=fuller
+For a deeper view:
+1. Git log --format=raw
+Below is view by committee's hash
+2. Git cat-file -p a57d7
+
+Git uses four types of onjects:
+Commits, tree, blob, and annotated tag.
+
+Objects:
+Tree is like a folder
+Blob is a file within the folder
+To calculate a hash of any object:
+1. echo "banana" | git hash-object --stdin
+Returns hash value. 
+
+To look at a commit object, note its hash
+1. git cat-file -p ea578t
+After the tree hash is displayed , check other git objectsg
+
+A branch is a label on top of the commits. To move from one commit to the other we look at a parent commit, starting from a tip of the branch, down the branch the branch, to another commit. 
+Branches refer to commits, HEAD is a reference to a current branch.
+
+git commit -am "commit note"
+
+To switch from one branch to another,  do a checkout of that branch:
+
+1. git checkout branchname
+
+Change file being tracked, commit, and then view the file
+After switching branches, check the file again to see differences. 
+
+To check which branch we are currentkubreferencing, check a file in .git
+ll git I.
+cat .git/HEAD
+
+To see log for current branch only:
+1. git log --oneline --graph  --decorate
+To see log for all branches, add be-all parameter
+1. git log --oneline --graph  --decorate --all
+Rea-chability of a branch
+Resets berries branch to master 
+HEAD is gointo be pointing to both, benreis and master  branch
+1. git reset -- HARD master
+
+to get thenreachle berries branch back
+1. git reset - - HARD 4DG84 
+where 4DG84 is a hash for unreachable commit.
+
+Moving current branch to previous commit and keeping current changes in a different branch.
+1. Make a change to a file being tracked. 
+2. Then create a new branch 
+3. Make sure all commits are under the same branch by doing git log --oneline --graph --decorate --all
+To step back one commit:
+5. git reset --hard HEAD^
+
+To add a tag to a commit
+1. git tag bugtag
+
+To add a tag to an existing commit:
+1. git tag tagName 0716B
+
+Staging Area:
+Files have to be moved to staging area  before being able to do a commit. 
+To add all files in the tree that were modified to the staging area:
+1. git add . 
+
+Clone local repo
+$mkdir repo-name
+$cd repo-name
+$git clone ~/source-repo
